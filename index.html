@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <title>Compressor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <br>
+  <h3 class="text-center">Image Optimization tool </h3>
+  
+  <br>
+
+<div class= "container p-6 my-4 bg-white border">
+
+  
+   
+   <div class="container p-3 my-3 bg-light border">
+
+
+      <p> Compress your image(s) here </p>
+
+      <div>
+        <input type="file" name="" id="upload" accept="image/*" multiple />
+		<input type="button" name="" id="clearQueue"  value="Clear Queue(s)" />		
+		<input type="button" name="" id="clearQueue"  value="Download All" onclick="downloadSimple();"/>
+      </div>
+      <div>
+        <div src="" alt="" id="preview" />
+
+        <p id="output"></p>
+		
+      </div>
+    </div>
+	</div>
+
+
+	<div class="container p-3 my-3 bg-light border">
+	<p> Edit Metadata of your image(s)  </p>
+	
+	 <div>
+        <input type="file" name="" id="upload2" accept="image/*" multiple />
+      </div>
+	  
+	    <div>
+        <div src="" alt="" id="preview2" />
+
+		
+      </div>
+	
+	</div>
+	
+	</div>
+	
+    <script type="text/javascript" src="./modernizr.js"></script>
+    <script type="text/javascript" src="./compress.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+	<script type="text/javascript" src="./jszip.js"></script>
+	<script type="text/javascript" src="./jszip.min.js"></script>
+    <script type="text/javascript" src="./jszip-utils.js"></script>  
+    <script type="text/javascript" src="./jszip-utils.min.js"></script>
+    <script type="text/javascript" src="./FileSaver.js"></script>
+	</body>
+</html>

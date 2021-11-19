@@ -1,0 +1,45 @@
+<html>
+<body>
+  <script type="text/javascript" src="./jszip.js"></script>  
+  <script type="text/javascript" src="./jszip-utils.js"></script>  
+  <script type="text/javascript" src="./jszip-utils.min.js"></script>
+  <script type="text/javascript" src="./jszip.min.js"></script>
+  <script type="text/javascript" src="./FileSaver.js"></script>
+  <script type="text/javascript" src="jszip-utils.min.js"></script> 
+  <script>
+   
+   
+      window.onload = function(event) {
+        let val= document.querySelector('#button')
+		
+		
+		
+
+         //let files= {!!$event->image_gallery!!}
+
+       let files=["images/image1.jpg","images/image3.jpg"];
+	   
+	   
+
+  
+       var zip = new JSZip();
+        zip.file("im1.jpg", getBase64Image(files[0]), {base64: true});
+        zip.file("im2.jpg", getBase64Image(files[1]), {base64: true});
+        zip.generateAsync({type:"blob"}).then(function(content) {
+            saveAs(content, "download.zip");
+        }); 
+
+		
+		}
+      
+  
+  </script>
+  <br/>
+  <br/>
+  <center>
+    Click the button to generate a ZIP file
+    <br/>
+    <input id="button" type="button"  value="Create Zip" />
+  </center>
+</body>
+</html>
